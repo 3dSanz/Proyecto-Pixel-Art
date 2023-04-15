@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d87c84f2adda92c4a9e8760cf090db1a
+guid: 681af2c519adb0048a5de2e743ceba51
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 170
+  spritePixelsToUnits: 6
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,223 +104,160 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_0"
+      name: Plataformas-Escenario1_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 780
-        width: 185
-        height: 339
+        x: 2
+        y: 39
+        width: 22
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2915c0e10095d5749b2d1264c04bc67f
-      internalID: -175954029
+      spriteID: ead23a5d40a75ad4e95efbcd92772472
+      internalID: -749562995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_1"
+      name: Plataformas-Escenario1_1
       rect:
         serializedVersion: 2
-        x: 315
-        y: 786
-        width: 185
-        height: 339
+        x: 38
+        y: 52
+        width: 26
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c46812b0e0ea342a2bdc49b0ad8794
-      internalID: -1365366589
+      spriteID: b3a04c40eae66e1429a65d13ae1d198a
+      internalID: 1797032745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_2"
+      name: Plataformas-Escenario1_2
       rect:
         serializedVersion: 2
-        x: 548
-        y: 786
-        width: 184
-        height: 339
+        x: 32
+        y: 35
+        width: 11
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 932939cafb86ea141833b010d7ebf1b7
-      internalID: -1661812598
+      spriteID: abc6e3a3afb5a884b93027e92de7a8ff
+      internalID: -239061371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_3"
+      name: Plataformas-Escenario1_3
       rect:
         serializedVersion: 2
-        x: 774
-        y: 774
-        width: 179
-        height: 345
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e2239423a86b8d45946c274fb31e462
-      internalID: 2011033077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_4"
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 404
-        width: 185
-        height: 352
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 422b235aa86a4304fa20c1c9c4e2af2d
-      internalID: -1027721575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_5"
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 404
-        width: 185
-        height: 352
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cda773bc0f6068248945b051a33f2e93
-      internalID: -733141474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_6"
-      rect:
-        serializedVersion: 2
-        x: 559
-        y: 404
-        width: 185
-        height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b7cfc0fb4c9daf448f5a3ae119e2851
-      internalID: 340817379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_7"
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 410
-        width: 185
-        height: 340
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a35d46dd4597b9c46a3cf9d517cec45c
-      internalID: -307717799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_8"
-      rect:
-        serializedVersion: 2
-        x: 59
+        x: 53
         y: 36
-        width: 185
-        height: 351
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae802ceda70566a4fb9e17d129c5cd42
-      internalID: 1070193225
+      spriteID: fe9096c72c7666141a9c5630beac0553
+      internalID: 1515668919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_9"
+      name: Plataformas-Escenario1_4
       rect:
         serializedVersion: 2
-        x: 303
-        y: 30
-        width: 185
-        height: 351
+        x: 34
+        y: 24
+        width: 19
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e66e863fbbc7ee4d9b366ff9cbeced0
-      internalID: 1265748183
+      spriteID: dfd5fdfbb2c35c14080e04b0625cb3ed
+      internalID: -1168375068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Enemigo-P\xEDxel-Art_10"
+      name: Plataformas-Escenario1_5
       rect:
         serializedVersion: 2
-        x: 559
+        x: 2
+        y: 0
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dce33b53fbddd641b20f8986a08b047
+      internalID: -480357954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plataformas-Escenario1_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 8
+        width: 37
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf53d3d4ee4e814aa3d8582b19d3fec
+      internalID: -467642191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plataformas-Escenario1_7
+      rect:
+        serializedVersion: 2
+        x: 3
         y: 30
-        width: 185
-        height: 351
+        width: 19
+        height: 3
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d38db6bb7706595409f42f3b5146fd57
-      internalID: 189582299
+      spriteID: 6452f84f9ee8afc4780b905e1c993005
+      internalID: -1014725939
       vertices: []
       indices: 
       edges: []
@@ -345,17 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "Enemigo-P\xEDxel-Art_8": 1070193225
-      "Enemigo-P\xEDxel-Art_0": -175954029
-      "Enemigo-P\xEDxel-Art_1": -1365366589
-      "Enemigo-P\xEDxel-Art_4": -1027721575
-      "Enemigo-P\xEDxel-Art_10": 189582299
-      "Enemigo-P\xEDxel-Art_6": 340817379
-      "Enemigo-P\xEDxel-Art_3": 2011033077
-      "Enemigo-P\xEDxel-Art_5": -733141474
-      "Enemigo-P\xEDxel-Art_2": -1661812598
-      "Enemigo-P\xEDxel-Art_7": -307717799
-      "Enemigo-P\xEDxel-Art_9": 1265748183
+      Plataformas-Escenario1_7: -1014725939
+      Plataformas-Escenario1_3: 1515668919
+      Plataformas-Escenario1_0: -749562995
+      Plataformas-Escenario1_4: -1168375068
+      Plataformas-Escenario1_2: -239061371
+      Plataformas-Escenario1_5: -480357954
+      Plataformas-Escenario1_6: -467642191
+      Plataformas-Escenario1_1: 1797032745
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
