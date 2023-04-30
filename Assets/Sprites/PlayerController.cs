@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rBody; 
     private GroundSensor sensor;
+    private BoxCollider2D boxCollider;
     public Animator anim;
     GameManager gameManager;
     public float playerSpeed = 5.5f;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); 
+        boxCollider = GetComponent<BoxCollider2D>(); 
         rBody = GetComponent<Rigidbody2D>();
         sensor = GameObject.Find("GroundSensor").GetComponent<GroundSensor>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -52,5 +54,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() {
         rBody.velocity = new Vector2 (horizontal*playerSpeed, rBody.velocity.y);
+    }
+
+    public void PlayerDie()
+    {
+        boxCollider.enabled = false;
+        Destroy(this.gameObject, 0.5f);
     }
 }
