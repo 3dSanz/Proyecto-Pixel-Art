@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     BoxCollider2D boxCollider;
     Rigidbody2D rBody;
     GameManager gameManager;
+    SoundManager soundManager;
+    SFXManager sfxManager;
     public GameObject enemyBulletPrefab;
     public Transform enemyBulletSpawn;
     // Start is called before the first frame update
@@ -18,19 +20,27 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         rBody = GetComponent<Rigidbody2D>();
+        sfxManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     }
 
     void Update()
     {
-            Invoke("EnemyShoot", 1.5f);
+            if(gameManager.enemyShoot == true)
+            {
+                Instantiate(enemyBulletPrefab, enemyBulletSpawn.position, enemyBulletSpawn.rotation);
+                anim.SetBool("IsEnemyShooting", true);
+                sfxManager.EnemyShoot();
+                gameManager.enemyTimer = 0;
+            }else
+            {
+                anim.SetBool("IsEnemyShooting", false);
+            }
+            
     }
 
-    void EnemyShoot()
-    {
-        Instantiate(enemyBulletPrefab, enemyBulletSpawn.position, enemyBulletSpawn.rotation);
-    }
 
     void FixedUpdate()
     {
@@ -41,6 +51,7 @@ public class Enemy : MonoBehaviour
     {
         boxCollider.enabled = false;
         Destroy(this.gameObject, 0.5f);
+        sfxManager.EnemyDied();
     }
 
     void OnCollisionEnter2D(Collision2D collision) 
@@ -48,7 +59,9 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
-
+            sfxManager.PlayerDeath();
+            soundManager.StopBGM();
+            gameManager.GameOver();
         }   
 
         if (collision.gameObject.tag == "ColisionEnemy")

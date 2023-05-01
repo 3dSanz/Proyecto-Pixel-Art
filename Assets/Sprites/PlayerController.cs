@@ -11,9 +11,17 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boxCollider;
     public Animator anim;
     GameManager gameManager;
+    SoundManager soundManager;
+    SFXManager sfxManager;
     public float playerSpeed = 5.5f;
     float horizontal;
     public float jumpForce = 3f;
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+
+    public Transform attackHitBox;
+    public float attackRange;
+    public LayerMask enemyLayer;
 
 
     void Start()
@@ -22,6 +30,8 @@ public class PlayerController : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>(); 
         rBody = GetComponent<Rigidbody2D>();
         sensor = GameObject.Find("GroundSensor").GetComponent<GroundSensor>();
+        sfxManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         anim = GetComponent<Animator>();
     }
@@ -47,9 +57,54 @@ public class PlayerController : MonoBehaviour
                {
                    rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                    anim.SetBool("IsJumping", true);
+                   sfxManager.PlayerJump();
                }
         }
 
+        //Disparo
+         if(Input.GetKeyDown(KeyCode.K) && gameManager.canShoot)
+        {
+            anim.SetBool("IsShoot", true);
+            Invoke("Shooting", 0.3f);
+            sfxManager.PlayerShoot();
+            gameManager.powerUpTimer = 0;
+        }else
+            {
+                anim.SetBool("IsShoot", false);
+             }
+        
+        //Melee
+        if(Input.GetKeyDown(KeyCode.J) && gameManager.plMelee)
+        {
+            Attack();
+            anim.SetBool("IsMelee", true);
+            sfxManager.PlayerMelee();
+            gameManager.meleeTimer = 0;
+        }else
+        {
+            anim.SetBool("IsMelee", false);
+        }
+
+    }
+
+    void Shooting()
+    {
+        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+    }
+
+    void Attack()
+    {
+         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackHitBox.position, attackRange, enemyLayer);
+
+         for(int i = 0; i < enemiesInRange.Length; i++)
+         {
+            Destroy(enemiesInRange[i].gameObject);
+         }
+    }
+
+    void OnDrawGizmos() 
+    {
+        Gizmos.DrawWireSphere(attackHitBox.position, attackRange);    
     }
 
     private void FixedUpdate() {
@@ -60,5 +115,23 @@ public class PlayerController : MonoBehaviour
     {
         boxCollider.enabled = false;
         Destroy(this.gameObject, 0.5f);
+        sfxManager.PlayerDeath();
+        soundManager.StopBGM();
+        gameManager.GameOver();
     }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.gameObject.tag == "CollisionSpikes"){
+          PlayerDie();    
+        }
+
+        if (other.gameObject.tag == "ColisionMoneda")
+        {
+            Coin coin = other.gameObject.GetComponent<Coin>();
+            coin.Pick();
+            gameManager.AddCoin();
+        } 
+    }
+
 }

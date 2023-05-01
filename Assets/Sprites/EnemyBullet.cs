@@ -12,7 +12,7 @@ public class EnemyBullet : MonoBehaviour
     {
         rBody2D = GetComponent<Rigidbody2D>();
 
-        rBody2D.AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse);
+        rBody2D.AddForce(-transform.right * bulletSpeed, ForceMode2D.Impulse);
 
     }
 
