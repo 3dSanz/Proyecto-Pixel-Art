@@ -17,7 +17,8 @@ public class SFXManager : MonoBehaviour
 
     void Awake()
     {
-        source = GetComponent<AudioSource>();
+     DontDestroyOnLoad(this.gameObject);
+     source = GetComponent<AudioSource>();
 
     }
 
