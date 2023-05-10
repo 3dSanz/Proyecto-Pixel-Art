@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public bool isGameOver = false;
+    public bool isNextStage = false;
+    public bool isToMenu = false;
     public Text coinText;
     int contMonedas;
     public bool canShoot;
@@ -32,6 +34,18 @@ public class GameManager : MonoBehaviour
         StartCoroutine("LoadScene");
     }
 
+    public void NextStage()
+    {
+        isNextStage = true;
+        StartCoroutine("LsWinmenu");
+    }
+
+    public void ToMenu()
+    {
+        isToMenu = true;
+        StartCoroutine("LoadMenu");
+    }
+
     void Update()
     {
         PlayerShoot();
@@ -43,6 +57,18 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(2);
+    }
+
+    IEnumerator LsWinmenu()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(3);
+    }
+
+    IEnumerator LoadMenu()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(0);
     }
 
     void PlayerShoot()

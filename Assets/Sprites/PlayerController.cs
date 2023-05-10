@@ -131,6 +131,18 @@ public class PlayerController : MonoBehaviour
             Coin coin = other.gameObject.GetComponent<Coin>();
             coin.Pick();
             gameManager.AddCoin();
+        }
+
+        if (other.gameObject.tag == "FinishStage")
+        {
+            gameManager.NextStage();
+            Destroy(this.gameObject);
+        } 
+
+        if (other.gameObject.tag == "ToMenu")
+        {
+            gameManager.ToMenu();
+            Destroy(this.gameObject);
         } 
     }
 

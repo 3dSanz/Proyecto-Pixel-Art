@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-         if(collider.gameObject.tag != "Player" && collider.gameObject.tag != "ColisionMoneda" && collider.gameObject.tag != "Bullet")
+         if(collider.gameObject.tag != "Player" && collider.gameObject.tag != "ColisionMoneda" && collider.gameObject.tag != "Bullet" && collider.gameObject.layer != 7)
         {
             Destroy(this.gameObject);
         }
